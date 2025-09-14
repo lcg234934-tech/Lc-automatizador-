@@ -1,0 +1,214 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(0.08 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.15 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.15 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.577 0.245 27.325);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.646 0.222 41.116);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.646 0.222 41.116);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.646 0.222 41.116);
+  --chart-1: oklch(0.577 0.245 27.325);
+  --chart-2: oklch(0.08 0 0);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.646 0.222 41.116);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.15 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.577 0.245 27.325);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.646 0.222 41.116);
+  --sidebar-ring: oklch(0.646 0.222 41.116);
+  
+  /* Roulette theme variables */
+  --roulette-red: #DC2626;
+  --roulette-green: #059669;
+  --roulette-black: #1F2937;
+  --roulette-gold: #F59E0B;
+  --roulette-white: #FFFFFF;
+  --casino-felt: #0F172A;
+}
+
+.dark {
+  --background: oklch(0.08 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.15 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.15 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.577 0.245 27.325);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.646 0.222 41.116);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.646 0.222 41.116);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.646 0.222 41.116);
+  --chart-1: oklch(0.577 0.245 27.325);
+  --chart-2: oklch(0.08 0 0);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.646 0.222 41.116);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.15 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.577 0.245 27.325);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.646 0.222 41.116);
+  --sidebar-ring: oklch(0.646 0.222 41.116);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Orbitron', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    background: linear-gradient(135deg, var(--casino-felt) 0%, var(--roulette-black) 100%);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  /* Roulette-themed components */
+  .roulette-card {
+    @apply bg-card border-2 border-accent rounded-2xl shadow-2xl;
+    background: linear-gradient(145deg, oklch(0.15 0 0) 0%, oklch(0.12 0 0) 100%);
+    border-color: var(--roulette-gold);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .roulette-button {
+    @apply px-6 py-3 rounded-full font-semibold uppercase tracking-wider transition-all duration-300;
+    background: linear-gradient(145deg, var(--roulette-red) 0%, #B91C1C 100%);
+    border: 2px solid var(--roulette-gold);
+    color: var(--roulette-white);
+    box-shadow: 0 4px 16px rgba(220, 38, 38, 0.3);
+  }
+
+  .roulette-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
+  }
+
+  .roulette-button.green {
+    background: linear-gradient(145deg, var(--roulette-green) 0%, #047857 100%);
+    box-shadow: 0 4px 16px rgba(5, 150, 105, 0.3);
+  }
+
+  .roulette-button.green:hover {
+    box-shadow: 0 6px 20px rgba(5, 150, 105, 0.4);
+  }
+
+  .casino-chip {
+    @apply w-16 h-16 rounded-full flex items-center justify-center text-white font-bold text-sm;
+    background: linear-gradient(145deg, var(--roulette-red) 0%, #B91C1C 100%);
+    border: 3px solid var(--roulette-gold);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .roulette-wheel {
+    @apply w-32 h-32 rounded-full relative;
+    background: conic-gradient(
+      from 0deg,
+      var(--roulette-red) 0deg 10deg,
+      var(--roulette-black) 10deg 20deg,
+      var(--roulette-red) 20deg 30deg,
+      var(--roulette-black) 30deg 40deg,
+      var(--roulette-red) 40deg 50deg,
+      var(--roulette-black) 50deg 60deg,
+      var(--roulette-green) 60deg 70deg,
+      var(--roulette-black) 70deg 80deg,
+      var(--roulette-red) 80deg 90deg,
+      var(--roulette-black) 90deg 100deg,
+      var(--roulette-red) 100deg 110deg,
+      var(--roulette-black) 110deg 120deg
+    );
+    border: 4px solid var(--roulette-gold);
+    animation: spin 10s linear infinite;
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .roulette-wheel::after {
+    content: '';
+    @apply absolute top-1/2 left-1/2 w-5 h-5 rounded-full;
+    transform: translate(-50%, -50%);
+    background: var(--roulette-gold);
+    box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+  }
+
+  .gold-text {
+    color: var(--roulette-gold);
+    text-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
+  }
+
+  .neon-glow {
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.3), 0 0 40px rgba(245, 158, 11, 0.1);
+  }
+}
