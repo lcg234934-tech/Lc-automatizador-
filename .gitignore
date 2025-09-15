@@ -2,7 +2,7 @@ backend/__pycache__/
 backend/instance/
 backend/database/
 frontend/node_modules/
-frontend/dist/
+
 .env
 
 
